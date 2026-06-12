@@ -1,3 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 @import "primeicons/primeicons.css";
 @import "primeflex/primeflex.css";
+
+
+.color-general-components{
+  color: var(--p-sky-500);
+}
+
+.border-color-general-components{
+  border-color: var(--p-sky-500);
+}
+
+.button-color-general-components {
+    border-color: var(--p-sky-500) !important;
+    color: var(--p-sky-500) !important;
+}
+
+.btn-close-large .p-button-icon {
+    font-size: 2rem !important;
+}
+
+
