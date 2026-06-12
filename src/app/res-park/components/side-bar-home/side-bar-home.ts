@@ -9,6 +9,7 @@ import { StyleClassModule } from 'primeng/styleclass';
   selector: 'app-side-bar-home',
   imports: [AvatarModule, ButtonModule, DrawerModule, RippleModule, StyleClassModule],
   templateUrl: './side-bar-home.html',
+  styleUrls: ['./side-bar-home.css'],
 })
 export class SideBarHome {
   visible: boolean = false;

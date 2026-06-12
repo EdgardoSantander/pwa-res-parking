@@ -1,0 +1,128 @@
+/* Contenedor principal del drawer */
+:host ::ng-deep .p-drawer {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Content del drawer en headless mode */
+:host ::ng-deep .p-drawer .p-drawer-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 !important;
+}
+
+/* Contenedor principal internal */
+:host ::ng-deep .full {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Header fijo */
+:host ::ng-deep .full > .flex:first-of-type {
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+/* Botón prueba */
+:host ::ng-deep .full > div.shrink-0 {
+  flex-shrink: 0;
+}
+
+/* Contenedor scrollable del menu */
+:host ::ng-deep .full > .flex-1 {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 0;
+}
+
+/* Footer fijo */
+:host ::ng-deep .full > .shrink-0.mt-auto {
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+/* Mejora del scroll styling */
+:host ::ng-deep .flex-1::-webkit-scrollbar {
+  width: 6px;
+}
+
+:host ::ng-deep .flex-1::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+:host ::ng-deep .flex-1::-webkit-scrollbar-thumb {
+  background: var(--surface-400);
+  border-radius: 3px;
+}
+
+:host ::ng-deep .flex-1::-webkit-scrollbar-thumb:hover {
+  background: var(--surface-500);
+}
+
+/* Animaciones para submenús */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+  }
+  to {
+    opacity: 1;
+    max-height: 1000px;
+    overflow: hidden;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    max-height: 1000px;
+    overflow: hidden;
+  }
+  to {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+  }
+}
+
+/* Clases de animación para PrimeNG StyleClass */
+:host ::ng-deep .animate-slidedown {
+  animation: slideDown 0.3s ease-in-out forwards;
+}
+
+:host ::ng-deep .animate-slideup {
+  animation: slideUp 0.3s ease-in-out forwards;
+}
+
+/* Asegurar que los submenús están ocultos por defecto */
+:host ::ng-deep ul.list-none.hidden {
+  max-height: 0;
+  overflow: hidden;
+}
+
+/* Estilos para los elementos del menú */
+:host ::ng-deep ul.list-none:not(.p-0) {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Mejorar transición de items */
+:host ::ng-deep a.p-ripple,
+:host ::ng-deep div[pRipple] {
+  transition: all 0.15s ease-in-out;
+}
+
+/* Chevron rotation */
+:host ::ng-deep i.pi-chevron-down {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Cuando el menú está visible, rotar el chevron */
+:host ::ng-deep ul:not(.hidden) + i.pi-chevron-down {
+  transform: rotate(180deg);
+}
+
