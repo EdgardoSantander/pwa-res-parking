@@ -1,0 +1,347 @@
+
+
+:host {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.login-page {
+  min-height: 100%;
+  display: flex;
+  background: #071a3a;
+}
+
+/* =========================
+   PANEL IZQUIERDO
+========================= */
+.login-hero {
+  position: relative;
+  width: 62%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .login-hero {
+    display: block;
+  }
+}
+
+.login-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/estacionamiento.png');
+  background-size: cover;
+  background-position: center;
+  filter: blur(1px);
+  transform: scale(1.03);
+}
+
+.login-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 26, 58, 0.62);
+}
+
+.login-hero__content {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3.5rem 4rem;
+  color: #fff;
+}
+
+.login-hero__text {
+  max-width: 38rem;
+}
+
+.login-hero__text h1 {
+  margin: 0;
+  font-size: 4rem;
+  line-height: 1.05;
+  font-weight: 700;
+}
+
+.login-hero__text h1 span {
+  display: block;
+  color: #3b82f6;
+}
+
+.login-hero__text p {
+  margin-top: 1.5rem;
+  font-size: 1.35rem;
+  line-height: 1.6;
+  color: #dbeafe;
+}
+
+.login-hero__footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.login-hero__icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+}
+
+.login-hero__icon i {
+  color: #60a5fa;
+  font-size: 1.25rem;
+}
+
+.footer-title {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #fff;
+}
+
+.footer-subtitle {
+  margin: 0.2rem 0 0;
+  font-size: 1rem;
+  color: #60a5fa;
+}
+
+/* =========================
+   PANEL DERECHO
+========================= */
+.login-panel {
+  width: 100%;
+  min-height: 100vh;
+  background: #071a3a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .login-panel {
+    width: 38%;
+  }
+}
+
+.login-card {
+  width: 100%;
+  max-width: 28rem;
+}
+
+.login-header {
+  margin-bottom: 2rem;
+}
+
+.login-header h2 {
+  margin: 0;
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.login-header p {
+  margin-top: 0.75rem;
+  color: #cbd5e1;
+  font-size: 1rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.field-group label {
+  color: #fff;
+  font-size: 0.98rem;
+  font-weight: 500;
+}
+
+.login-input-wrapper {
+  width: 100%;
+  display: block;
+}
+
+.login-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.25rem;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.remember-me label {
+  color: #e2e8f0;
+  cursor: pointer;
+}
+
+.login-options a {
+  color: #60a5fa;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.login-options a:hover {
+  text-decoration: underline;
+}
+
+.login-submit {
+  width: 100%;
+  margin-top: 0.35rem;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.35rem 0;
+}
+
+.divider span {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.divider p {
+  margin: 0;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.login-contact {
+  margin: 0.75rem 0 0;
+  text-align: center;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.login-contact a {
+  color: #60a5fa;
+  text-decoration: none;
+  margin-left: 0.35rem;
+}
+
+.login-contact a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   PRIME NG OVERRIDES
+========================= */
+
+:host ::ng-deep .login-input {
+  width: 100% !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  color: #fff !important;
+  border-radius: 14px !important;
+  padding: 0.95rem 1rem 0.95rem 2.7rem !important;
+  font-size: 1rem !important;
+  box-shadow: none !important;
+}
+
+:host ::ng-deep .login-input::placeholder {
+  color: #94a3b8 !important;
+}
+
+:host ::ng-deep .login-input:enabled:focus {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 0.15rem rgba(59, 130, 246, 0.2) !important;
+}
+
+:host ::ng-deep .p-input-icon-left > i {
+  left: 1rem;
+  color: #94a3b8;
+  margin-top: -0.5rem;
+}
+
+:host ::ng-deep .login-password {
+  width: 100%;
+  display: block;
+}
+
+:host ::ng-deep .login-password .p-password-input {
+  width: 100% !important;
+}
+
+:host ::ng-deep .login-password .p-icon-field {
+  width: 100%;
+}
+
+:host ::ng-deep .login-password .p-input-icon {
+  color: #94a3b8;
+}
+
+:host ::ng-deep .login-submit.p-button {
+  background: linear-gradient(90deg, #2f7df6 0%, #3b82f6 100%) !important;
+  border: none !important;
+  border-radius: 14px !important;
+  padding: 1rem 1.25rem !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+}
+
+:host ::ng-deep .login-submit.p-button:hover {
+  filter: brightness(1.05);
+}
+
+:host ::ng-deep .social-btn.p-button {
+  width: 100%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: none !important;
+  border-radius: 14px !important;
+  padding: 0.95rem 1rem !important;
+  box-shadow: none !important;
+}
+
+:host ::ng-deep .social-btn.p-button img {
+  width: 20px;
+  height: 20px;
+}
+
+:host ::ng-deep .social-btn.p-button:hover {
+  background: #f8fafc !important;
+}
+
+:host ::ng-deep .social-btn .p-button-label {
+  flex: 0 0 auto !important;
+  font-weight: 600;
+}
+
+:host ::ng-deep .p-checkbox .p-checkbox-box {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+:host ::ng-deep .p-checkbox .p-checkbox-box.p-highlight {
+  background: #3b82f6;
+  border-color: #3b82f6;
+}
