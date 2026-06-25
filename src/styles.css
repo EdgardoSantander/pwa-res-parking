@@ -4,16 +4,20 @@
 
 
 .color-general-components{
-  color: var(--p-sky-500);
+  color: var(--p-surface-0);
+}
+
+.color-shadow-components{
+  background-color: var(--p-blue-900) !important;
 }
 
 .border-color-general-components{
-  border-color: var(--p-sky-500);
+  border-color: var(--p-surface-800);
 }
 
 .button-color-general-components {
-    border-color: var(--p-sky-500) !important;
-    color: var(--p-sky-500) !important;
+    border-color: var(--p-surface-800) !important;
+    color: var(--p-surface-800) !important;
 }
 
 .btn-close-large .p-button-icon {
@@ -32,4 +36,17 @@ html, body {
   height: 100%;
   margin: 0 !important;
   padding: 0 !important;
+}
+
+:root {
+    /* Define tu nuevo color primario (ejemplo: un morado) */
+    --p-primary-color: var(--p-blue-900) !important;
+    --p-primary-hover-color: var(--p-blue-900) !important;
+    --p-primary-active-color: var(--p-blue-900) !important;
+
+    /* Sobrescritura específica para el componente Button si lo requiere */
+    --p-button-primary-background: var(--p-blue-900) !important;
+    --p-button-primary-border-color: var(--p-blue-900) !important;
+    --p-button-primary-hover-background: var(--p-blue-900) !important;
+    --p-button-primary-hover-border-color: var(--p-blue-900) !important;
 }
